@@ -36,7 +36,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Asana" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Asana" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -92,12 +102,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551304558940</updated>
-      <workItem from="1551304580201" duration="268000" />
+      <workItem from="1551304580201" duration="517000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268000" />
+    <option name="totallyTimeSpent" value="517000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="833" extended-state="6" />
