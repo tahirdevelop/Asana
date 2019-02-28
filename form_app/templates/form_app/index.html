@@ -7,6 +7,22 @@
     <title>DEMO</title>
 </head>
 <body>
-HEllo world
+<div style="padding-top: 150px" align="center">
+
+    <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="form-group w-25 p-0">
+                {{ field }}
+            </div>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-primary">Отправить</button>
+
+    </form>
+
+</div>
+
 </body>
 </html>
