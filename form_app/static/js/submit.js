@@ -4,7 +4,6 @@ function getCookie(name) {
         var cookies = document.cookie.split(';');
         for (var i = 0; i < cookies.length; i++) {
             var cookie = jQuery.trim(cookies[i]);
-            // Does this cookie string begin with the name we want?
             if (cookie.substring(0, name.length + 1) === (name + '=')) {
                 cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
                 break;
@@ -38,7 +37,6 @@ $(document).ready(function () {
         $(".submit").addClass("loading");
         setTimeout(function () {
             $(".submit").addClass("hide-loading");
-            // For failed icon just replace ".done" with ".failed"
             $(".done").addClass("finish");
         }, 1000);
         setTimeout(function () {
@@ -48,4 +46,5 @@ $(document).ready(function () {
             $(".failed").removeClass("finish");
         }, 2500);
     })
+
 });

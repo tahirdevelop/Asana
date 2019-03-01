@@ -4,33 +4,40 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>DEMO</title>
 </head>
 <body>
-<div style="padding-top: 150px" align="center">
 
-    <form action="{% url 'index' %}" method="post">
+<div class="form">
+
+    <div class="mail"></div>
+
+    <h1>Заказать DEMO</h1>
+
+    <form action="{% url 'index' %}">
+
         {% csrf_token %}
 
         {% for field in form %}
-            <div class="form-group w-25 p-0">
+            <div class="form-group p-0">
                 {{ field }}
             </div>
         {% endfor %}
 
-        <div class="ajax-button">
-            <div class="fa fa-check done"></div>
-            <div class="fa fa-close failed"></div>
-            <input id="submit" class="submit" type="button" value="Submit"/>
-        </div>
+        <div class="submit">Отправить</div>
 
     </form>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script rel="javascript" type="text/javascript" src="{% static 'js/submit.js' %}"></script>
 </div>
+
+<div class="ok_message">
+    <span>Мы скоро свяжемся с вами !</span>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script rel="javascript" type="text/javascript" src="{% static 'js/submit.js' %}"></script>
+<script rel="javascript" type="text/javascript" src="{% static 'js/index.js' %}"></script>
 
 </body>
 </html>
