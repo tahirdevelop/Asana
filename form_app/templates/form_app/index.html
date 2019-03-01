@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>DEMO</title>
 </head>
 <body>
@@ -18,10 +20,16 @@
             </div>
         {% endfor %}
 
-        <button type="submit" class="btn btn-primary">Отправить</button>
+        <div class="ajax-button">
+            <div class="fa fa-check done"></div>
+            <div class="fa fa-close failed"></div>
+            <input id="submit" class="submit" type="button" value="Submit"/>
+        </div>
 
     </form>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script rel="javascript" type="text/javascript" src="{% static 'js/submit.js' %}"></script>
 </div>
 
 </body>
